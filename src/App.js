@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import crystal from './Crystal.png';
 // import logo from './logo.svg';
 // import crystal from './Crystal.png'
 import './App.css';
@@ -29,13 +30,22 @@ class App extends Component {
     };
   }
   render(){
-    return <div className="App">
-      {
-        this.state.monsters.map((monster) => {
-          return <h1 key={monster.id}> {monster.name}</h1>;
-        })
-      }
-    </div>     
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={crystal} className="App-logo" alt="logo" />
+          <h1>Crystalline Media</h1>
+          {
+            this.state.monsters.map((monster) => {
+              return (
+                <div key={monster.id}>
+                  <h3>{monster.name}</h3>
+                </div>);
+            })
+          }
+        </header>
+      </div>
+    )
   }   
 }
 export default App;
