@@ -1,6 +1,6 @@
 import { Component } from 'react';
 // import logo from './logo.svg';
-import crystal from './Crystal.png'
+// import crystal from './Crystal.png'
 import './App.css';
 
 class App extends Component {
@@ -8,38 +8,23 @@ class App extends Component {
     super();
 
     this.state = {
-      name: { firstName: 'Theron', lastName: 'Packus' },
-      company: 'Crystalline Media'
-    }
+      monster1: {
+        name: 'Linda'
+      },
+      monster2: {
+        name: 'Frank'
+      },
+      monster3: {
+        name: 'Jacky'
+      }
+    };
   }
   render(){
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={crystal} className="App-logo" alt="logo" />
-          <h1>{this.state.company}</h1>
-          <p>
-            Hi {this.state.name.firstName}
-          </p>
-          <button onClick={() => {
-            this.setState(
-              () => {
-                return { name: { firstName: 'T', lastName: 'P' },
-            };
-          });
-          }}>Change Name
-          </button>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    return <div className="App">
+      <h1>{this.state.monster1.name}</h1>
+      <h1>{this.state.monster2.name}</h1>
+      <h1>{this.state.monster3.name}</h1>
+    </div>     
   }   
 }
 export default App;
