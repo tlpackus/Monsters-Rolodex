@@ -18,7 +18,10 @@ class App extends Component {
           <p>
             Hi {this.state.name}
           </p>
-          <button>Change Name</button>
+          <button onClick={() => {
+            this.setState({ name: 'T'});
+          }}>Change Name
+          </button>
           <a
             className="App-link"
             href="https://reactjs.org"
