@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import crystal from './Crystal.png'
 import './App.css';
 
 class App extends Component {
@@ -7,14 +8,16 @@ class App extends Component {
     super();
 
     this.state = {
-      name: 'Theron'
+      name: 'Theron',
+      company: 'Crystalline Media'
     }
   }
   render(){
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={crystal} className="App-logo" alt="logo" />
+          <h1>{this.state.company}</h1>
           <p>
             Hi {this.state.name}
           </p>
