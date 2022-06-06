@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import CardList from './components/card-list/card-list.component';
-import crystal from './Crystal.png';
+import SearchBox from './components/search-box/search-box.component';
+import Crystal from './Crystal.png';
 import './App.css';
 
 class App extends Component {
@@ -44,21 +45,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={crystal} className="App-logo" alt="logo" />
+          <img src={Crystal} className="App-logo" alt="logo" />
           <h1>Monster Rolodex</h1>
-          <input 
-            className='search-box' 
-            type='search' 
-            placeholder='search-monsters' 
-            onChange={onSearchChange}/>
-          {/* {
-            filteredMonsters.map((monster) => {
-              return (
-                <div key={monster.id}>
-                  <h3>{monster.name}</h3>
-                </div>);
-            })
-          } */}
+          <SearchBox 
+            className='search-box'
+            onChangeHandler={onSearchChange}
+            placeholder='search monsters'
+          />
           <CardList monsters={filteredMonsters}/>
         </header>
       </div>
