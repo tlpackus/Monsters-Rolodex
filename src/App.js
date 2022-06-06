@@ -1,7 +1,5 @@
 import { Component } from 'react';
 import crystal from './Crystal.png';
-// import logo from './logo.svg';
-// import crystal from './Crystal.png'
 import './App.css';
 
 class App extends Component {
@@ -9,32 +7,31 @@ class App extends Component {
     super();
 
     this.state = {
-      monsters: [
-        {
-          name: 'Linda',
-          id: 'ad3243b11'
-        },
-        {
-          name: 'Frank',
-          id: 'ss89778'
-        },
-        {
-          name: 'Jacky',
-          id: 'hh7512122'
-        },
-        {
-          name: 'Andrei',
-          id: 'we33#124'
-        }
-      ]
+      monsters: []
     };
   }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((users) =>
+        this.setState(
+          () => {
+            return { monsters: users };
+          }
+        )
+      )
+  }
+
   render(){
     return (
       <div className="App">
         <header className="App-header">
           <img src={crystal} className="App-logo" alt="logo" />
-          <h1>Crystalline Media</h1>
+          <h1>Monster Rolodex</h1>
+          <input className='search-box' type='search' placeholder='search-monsters' onChange={() => {
+
+          }}/>
           {
             this.state.monsters.map((monster) => {
               return (
