@@ -33,6 +33,15 @@ body {
     transform: rotate(360deg);
   }
 } 
+
+
+.App-title {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 76px;
+  color: #0ccac4;
+  font-family: 'Bigelow Rules';
+}
 /* .App {
   text-align: center;
 }
