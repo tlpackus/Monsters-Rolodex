@@ -48,7 +48,7 @@ class App extends Component {
           <img src={Crystal} className="App-logo" alt="logo" />
           <h1>Monster Rolodex</h1>
           <SearchBox 
-            className='search-box'
+            className='monsters-search-box'
             onChangeHandler={onSearchChange}
             placeholder='search monsters'
           />
