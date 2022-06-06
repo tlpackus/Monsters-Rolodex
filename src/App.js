@@ -29,8 +29,18 @@ class App extends Component {
         <header className="App-header">
           <img src={crystal} className="App-logo" alt="logo" />
           <h1>Monster Rolodex</h1>
-          <input className='search-box' type='search' placeholder='search-monsters' onChange={() => {
-
+          <input 
+            className='search-box' 
+            type='search' 
+            placeholder='search-monsters' 
+            onChange={(event) => {
+              const searchString = event.target.value.toLocaleLowerCase();
+              const filteredMonsters = this.state.monsters.filter((monster) => {
+                return monster.name.toLowerCase().includes(searchString);
+            });
+            this.setState(() => {
+              return { monsters: filteredMonsters }
+            })
           }}/>
           {
             this.state.monsters.map((monster) => {
