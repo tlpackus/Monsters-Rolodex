@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import CardList from './components/card-list/card-list.component';
 import crystal from './Crystal.png';
 import './App.css';
 
@@ -50,14 +51,15 @@ class App extends Component {
             type='search' 
             placeholder='search-monsters' 
             onChange={onSearchChange}/>
-          {
+          {/* {
             filteredMonsters.map((monster) => {
               return (
                 <div key={monster.id}>
                   <h3>{monster.name}</h3>
                 </div>);
             })
-          }
+          } */}
+          <CardList />
         </header>
       </div>
     )
