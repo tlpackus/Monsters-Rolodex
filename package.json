@@ -1,6 +1,6 @@
 {
-  "homepage": "https://tlpackus.github.io/monster-rolodex",
-  "name": "monsters-rolodex",
+  "homepage": "https://tlpackus.github.io/Monsters-Rolodex",
+  "name": "monster-rolodex",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
